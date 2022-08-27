@@ -1,0 +1,39 @@
+//* ============================================ Стили компонента "Пагинация" ========================================*\\
+@import "../../styles/_variables.scss";
+@import "../../styles/mixins/_mixin-media.scss";
+
+.product-cards-pagination {
+		display: flex;
+		@include media-max(768) {
+			font-size: 1.3rem;
+			margin-bottom: 2rem;
+		}
+		&__btn,
+		&__btn-prev,
+		&__btn-next {
+			justify-content: center;
+			width: 4rem;
+			height: 2rem;
+			border: 0.0625rem solid $col_6;
+			border-radius: 2.063rem;
+			box-shadow: $bs_base;
+			transition: all 0.4s ease-in-out;
+			@include media-max(320) {
+				width: 3.5rem;
+			}
+			&:hover,
+			&.active {
+				color: $col_3;
+				border: 0.0625rem solid $col_3;
+			}
+		}
+		&__list {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0rem 1rem;
+		}
+		&__btn {
+			margin: 0rem 0.3rem;
+		}
+}

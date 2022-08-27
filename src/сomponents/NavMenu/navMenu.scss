@@ -1,0 +1,84 @@
+
+//* ============================================ Стили компонента "Навигационное меню" ========================================*\\
+
+@import "../../styles/_variables.scss";
+@import "../../styles/mixins/_mixin-media.scss";
+
+.navmenu {
+	@include media-max(1024) {
+		margin: 0 6rem;
+		opacity: 1;
+	}
+	@include media-max(768) {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		width: 100vw;
+		height: 100vh;
+		transform: translate(-50%, -50%);
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $col_12;
+		backdrop-filter: blur(7px);
+		visibility: hidden;
+		opacity: 0;
+		transition: all 0.3s ease-in-out;
+		&.active {
+			visibility: visible;
+			opacity: 1;
+			transition: all 0.3s ease-in-out;
+			& .about-us__banner {
+				z-index: 1
+			}
+			& .navmenu__item {
+				opacity: 1;
+				transition: font-size 0.5s ease-in-out, transform 0.5s ease-in-out, opacity .5s .5s;
+			}
+			@include media-max(320) {
+				& ~ .header__btn-box {
+					visibility: visible;
+					opacity: 1;
+					top: -0.2rem;
+					left: 1rem;
+					transition: all 0.5s ease-in-out;
+				}
+			}
+		}
+	}
+	&__list {
+		@extend %flex-cent;
+		@include media-max(768) {
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+			height: 50%;
+		}
+	}
+	&__item {
+		font-size: $fs_8;
+		padding: 0 2rem;
+		@include media-max(768) {
+			opacity: 0;
+			font-size: $fs_3;
+			&:hover{
+				transform: scale(1.5);
+			}
+		}
+		@include media-max(576) {
+			font-size: $fs_3;
+			transition: font-size 0.5s ease-in-out;
+		}
+	}
+	&__link {
+		color: $col_base;
+		transition: color 0.3s ease-in-out;
+		&:hover {
+			color: $col_3;
+		}
+	}
+	&__link.active {
+		color: $col_3;
+	}
+}

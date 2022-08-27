@@ -1,0 +1,61 @@
+//* ============================================ Стили компонента "Бургер меню" ========================================*\\
+
+@import "../../styles/_variables.scss";
+@import "../../styles/mixins/_mixin-media.scss";
+
+.burger-menu {
+	position: absolute;
+	top: 0rem;
+  right: 0.5rem;
+	width: 6rem;
+	height: 6rem;
+	@extend %flex-cent;
+	cursor: pointer;
+	display: none;
+	@include media-max(768) {
+		display: block;
+	}
+	@include media-max(576) {
+		right: 0.3rem;
+	}
+	@include media-max(320) {
+		right: -0.3rem;
+		top: -1rem;
+	}
+}
+
+.burger {
+	width: 6rem;
+	height: 6rem;
+  transition: transform 400ms;
+  user-select: none;
+	&.active {
+  	transform: rotate(45deg);
+	}
+	& .top {
+		stroke-dasharray: 40 121;
+	}
+	& .bottom {
+		stroke-dasharray: 40 121;
+	}
+	&.active .top {
+		stroke-dashoffset: -68px;
+	}
+	&.active .bottom {
+		stroke-dashoffset: -68px;
+	}
+	&:hover .line,
+	&.active .line {
+		stroke: $col_3;
+		transition: stroke-dasharray 400ms, stroke-dashoffset 400ms, stroke 0.3s ease-in-out;
+	}
+}
+
+.line {
+  fill:none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms, stroke 0.3s ease-in-out;
+  stroke: $col_base;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+

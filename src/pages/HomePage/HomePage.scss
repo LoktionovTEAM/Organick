@@ -1,0 +1,44 @@
+//*==================================== Стили компонента страница "Домашняя" =======================================*//
+
+@import '../../styles/_variables.scss';
+@import '../../styles/mixins/_mixin-media.scss';
+
+.home {
+	&__info {
+		flex: 0 1 40%;
+		@include media-max(1024) {
+			flex: 0 1 50%;
+		}
+		@include media-max(768) {
+			flex: 0 1 60%;
+		}
+		@include media-max(576) {
+			flex: 0 1 75%;
+			margin-right: 3rem;
+		}
+		@include media-max(576) {
+			flex: 0 1 100%;
+		}
+		& p {
+			margin-bottom: 1rem;
+		}
+		& h1 {
+			font-size: $fs_9;
+			line-height: $lh_9;
+			margin-bottom: 1.875rem;
+		}
+	}
+}
+.webp .home {
+	background: url(/assets/img/home/home_bg.webp) center/cover no-repeat;
+}
+.no-webp .home,
+.no-js .home {
+	background: url(/assets/img/home/home_bg.jpg) center/cover no-repeat;
+}
+.home-wrap {
+	width: 100rem;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}

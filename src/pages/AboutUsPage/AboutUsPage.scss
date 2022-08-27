@@ -1,0 +1,94 @@
+//* ============================================ Стили компонента страница "О нас" ========================================*\\
+@import '../../styles/_variables.scss';
+@import '../../styles/mixins/_mixin-media.scss';
+
+.about-us-header {
+	background-color: $col_7;
+}
+.about-us-wrap {
+	@extend %flex-cent;
+	max-width: 100%;
+	@include media-max(768) {
+		flex-wrap: wrap;
+	}
+}
+.about-us {
+	background-color: $col_7;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	@include media-max(768) {
+		overflow-y: auto;
+	}
+	&__banner {
+		width: 43rem;
+		height: 40rem;
+		position: relative;
+		right: 1rem;
+		top: 1rem;
+		z-index: 2;
+		@include media-max(1024) {
+			width: 37rem;
+		}
+		@include media-max(768) {
+			top: 4rem;
+			z-index: 1;
+		}
+		@include media-max(320) {
+			width: 26rem;
+			height: auto;
+			right: 0;
+		}
+	}
+	&__info {
+		flex: 0 1 49%;
+		padding-top: 3rem;
+		@include media-max(1024) {
+			flex: 0 1 51%;
+		}
+		@include media-max(768) {
+			flex: 0 1 100%;
+		}
+	}
+	&__title {
+		margin-bottom: 0.5rem;
+		padding-right: 6rem;
+	}
+	&__text {
+		line-height: $lh_13;
+		margin-bottom: 1rem;
+	}
+	&__btn {
+		background-color: $col_11 !important;
+		@include media-max(768) {
+			margin: 2rem 0rem;
+		}
+	}
+}
+.text-about-us:last-child {
+	margin-bottom: 5rem;
+}
+.text-about-us {
+	@extend %flex-cent;
+	&__img {
+		flex: 0 1 22%;
+		width: 5rem;
+		height: 5rem;
+		margin-right: 1.25rem;
+		box-shadow: $bs_base;
+		border-radius: 1rem;
+		object-fit: cover;
+		@include media-max(768) {
+			flex: 0 1 14%;
+			width: 6.5rem;
+			height: 6.5rem;
+		}
+	}
+	&__txt {
+		& h5 {
+			@extend %ff_Roboto-Regular;
+			font-size: $fs_7;
+			line-height: $lh_7;
+		}
+	}
+}

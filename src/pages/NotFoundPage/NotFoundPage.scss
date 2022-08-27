@@ -1,0 +1,40 @@
+//*=================================== Стили страницы "NotFound" ===================================*//
+
+@import "../../styles/_variables.scss";
+@import "../../styles/mixins/_mixin-media.scss";
+
+.not-found {
+		&__img {
+			width: 40rem;
+    	height: 25rem;
+			@include media-max(320) {
+				width: 30rem;
+    		height: 20rem;
+			}
+		}
+		&__title {
+			margin: 2rem 0rem 0.5rem 0rem;
+		}
+		&__text {
+			margin-bottom: 1rem;
+		}
+		&__btn {
+			@extend %ff_Roboto-Regular;
+			font-size: $fs_8;
+			width: 7.938rem;
+			height: 3.375rem;
+			border: 0.0625rem solid $col_6;
+			border-radius: 2.063rem;
+			transition: all 0.3s ease-in-out;
+			&:hover {
+				color: $col_3;
+				border: 0.0625rem solid $col_3;
+			}
+		}
+}
+.not-found-wrap {
+	@extend %flex-colum-cent;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}

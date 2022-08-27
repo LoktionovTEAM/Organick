@@ -1,0 +1,324 @@
+//* ==================================== Стили компонента "Наши контакты" ========================================*\\
+
+@import '../../styles/_variables.scss';
+@import '../../styles/mixins/_mixin-media.scss';
+
+.contact-us {
+	overflow: hidden;
+	@include media-max(576) {
+		overflow-y: auto;
+	}
+	&__text {
+		min-height: 4rem;
+		margin-bottom: 3.75rem;
+		@include media-max(768) {
+			min-height: 5.8rem;
+		}
+		@include media-max(576) {
+			min-height: 4rem;
+		}
+		@include media-max(320) {
+			margin-bottom: 1.5rem;
+		}
+	}
+	&__form-subscription {
+		width: 100%;
+		@extend %flex-cent;
+		border-radius: 1rem;
+		padding: 0.5rem;
+		@include media-max(768) {
+			padding: 0.5rem 1.5rem;
+		}
+		@include media-max(576) {
+			flex-wrap: wrap;
+			padding: 1.5rem;
+		}
+		@include media-max(320) {
+			text-align: center;
+			padding: 1rem;
+		}
+	}
+	&__colum-box {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+		padding: 4rem 0rem;
+		@include media-max(1024) {
+			padding: 3rem 0rem;
+		}
+		@include media-max(768) {
+			grid-template-columns: repeat(auto-fill, minmax(3rem, 1fr));
+		}
+		@include media-max(576) {
+			grid-template-columns: repeat(auto-fill, minmax(3.8rem, 1fr));
+		}
+		@include media-max(320) {
+			grid-template-columns: repeat(auto-fill, minmax(2rem, 1fr));
+		}
+		@include media-max(320) {
+			padding: 2rem 0rem;
+		}
+		& h5 {
+			font-size: $fs_15;
+		}
+	}
+	&__colum:nth-child(2) {
+		grid-column: span 6;
+		@extend %flex-colum-cent;
+		text-align: center;
+		padding: 0rem 1.5rem 0rem 1.5rem;
+		@include media-max(768) {
+			grid-column: span 9;
+		}
+		@include media-max(576) {
+			grid-column: span 10;
+		}
+		@include media-max(320) {
+			grid-column: span 13;
+			padding: 0;
+		}
+	}
+	&__copyright {
+		border-top: 0.0625rem solid $col_13;
+		width: 100vw;
+		padding: 1.875rem;
+		text-align: center;
+		@include media-max(320) {
+			line-height: $lh_11;
+		}
+	}
+}
+.webp .contact-us__form-subscription {
+	background: url(/assets/img/contactUs/contactUs-form_bg.webp) center/cover no-repeat;
+}
+.no-webp .contact-us__form-subscription,
+.no-js .contact-us__form-subscription {
+	background: url(/assets/img/contactUs/contactUs-form_bg.jpg) center/cover no-repeat;
+}
+.contact-us-header {
+	background-color: $col_1;
+}
+.form-subscription {
+	&__title {
+		margin: 0rem 7rem 0rem 4.375rem;
+		color: $col_1;
+		padding: 1rem 0rem;
+		@include media-max(1024) {
+			margin: 0rem 3rem 0rem 0rem;
+		}
+		@include media-max(576) {
+			margin: 0;
+			padding: 0rem 0rem 1rem 0rem;
+		}
+	}
+	&__input-box {
+		width: 24rem;
+		display: flex;
+		flex-direction: column;
+		margin-right: 1rem;
+		position: relative;
+		@include media-max(576) {
+			flex: 0 1 60%;
+		}
+		@include media-max(320) {
+			margin-bottom: 2rem;
+		}
+		& .text--error {
+			position: absolute;
+			bottom: -1.2rem;
+			left: 0;
+			color: $col_base;
+		}
+	}
+	&__input {
+		width: 21.88rem;
+		padding: 1rem;
+		border: 0.2rem solid rgba(255, 255, 255, 0);
+		border-radius: 1rem;
+		&::placeholder {
+			opacity: 0.7;
+			transition: opacity 1s ease-in-out;
+			@include media-max(320) {
+				text-align: center;
+			}
+		}
+		&:hover.form-subscription__input::placeholder {
+			opacity: 0;
+			transform: translateX(-15rem);
+			transition: transform 0.5s ease-in-out, opacity 0.7s;
+		}
+		&:focus {
+			border: 0.2rem solid rgba(255, 255, 255, 0.8);
+		}
+		&.error {
+			box-shadow: $bs_input-error;
+			transition: border 0.5s ease-in-out;
+		}
+	}
+	&__btn {
+		color: $col_base !important;
+		@include media-max(768) {
+			flex: 0 1 30%;
+		}
+		@include media-max(320) {
+			flex: 0 1 42%;
+		}
+	}
+}
+.btn-form-subscription {
+	&__text {
+		@extend %ff_OpenSans-Bold;
+		line-height: $lh_1;
+	}
+}
+.contact-us-wrap {
+	width: 100rem;
+	height: 100vh;
+	@extend %flex-colum-cent;
+	padding-top: 7rem;
+	@include media-max(576) {
+		height: auto;
+	}
+}
+.contact-us-logo {
+	margin-bottom: 2.875rem;
+	text-align: center;
+	@include media-max(320) {
+		margin-bottom: 1rem;
+	}
+}
+.contact-us-social {
+	margin-bottom: 2.248rem;
+	&__list {
+		display: flex;
+	}
+	&__item {
+		padding-right: 1.25rem;
+	}
+	&__item:last-child {
+		padding-right: 0;
+	}
+	&__link {
+		width: 3.75rem;
+		height: 3.75rem;
+		@extend %flex-cent;
+		background: $col_10;
+		border-radius: 50%;
+		transition: transform 1s;
+		box-shadow: $bs_base;
+		&:hover {
+			transform: scale(1.2);
+		}
+		&:hover .contact-us-social__icon-facebook {
+			fill: $col_17;
+		}
+		&:hover .contact-us-social__icon-twitter {
+			fill: $col_18;
+		}
+		&:hover .contact-us-social__icon-instagram {
+			fill: $col_19;
+		}
+		&:hover .contact-us-social__icon-pinterest {
+			fill: $col_20;
+		}
+	}
+	&__icon-facebook,
+	&__icon-twitter,
+	&__icon-instagram,
+	&__icon-pinterest {
+		width: 2rem;
+		height: 2rem;
+		fill: $col_base;
+		transition: fill 0.4s ease-in-out;
+	}
+}
+.colum-contact-us {
+	grid-column: span 4;
+	text-align: right;
+	padding-right: 1.25rem;
+	border-right: 0.0625rem solid $col_13;
+	@include media-max(1024) {
+		grid-column: span 3;
+	}
+	@include media-max(768) {
+		grid-column: span 5;
+	}
+	@include media-max(576) {
+		grid-row: 2;
+		grid-column: span 5;
+	}
+	@include media-max(320) {
+		grid-column: span 7;
+	}
+	& p {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 0.5rem;
+	}
+	&__title {
+		margin-bottom: 0.5rem;
+	}
+	&__address {
+		& a {
+			white-space: nowrap;
+			@include media-max(768) {
+				white-space: normal;
+			}
+		}
+	}
+}
+.colum-contact-us a:hover {
+	color: $col_3;
+}
+.colum-utility-pages {
+	grid-column: span 4;
+	padding-left: 1.25rem;
+	border-left: 0.0625rem solid $col_13;
+	@include media-max(1024) {
+		grid-column: span 3;
+	}
+	@include media-max(768) {
+		grid-column: span 5;
+	}
+	@include media-max(576) {
+		grid-row: 2;
+		grid-column: span 5;
+	}
+	@include media-max(320) {
+		grid-column: span 6;
+	}
+	& p {
+		margin-bottom: 0.8rem;
+	}
+	&__title {
+		margin-bottom: 0.5rem;
+	}
+}
+.copyright {
+	&__link {
+		position: relative;
+		color: $col_3;
+		& span {
+			color: $col_18;
+		}
+		& span:last-child {
+			position: absolute;
+			top: -0.2rem;
+			right: -0.9rem;
+		}
+	}
+	&__link,
+	&__link span {
+		transition: color 0.3s ease-in-out;
+	}
+	&__link:hover,
+	&__link:hover span {
+		transition: color 0.3s ease-in-out;
+	}
+	&__link:hover {
+		color: $col_18;
+	}
+	&__link:hover span {
+		color: $col_3;
+	}
+}

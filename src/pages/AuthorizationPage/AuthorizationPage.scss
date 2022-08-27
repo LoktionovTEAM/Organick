@@ -1,0 +1,309 @@
+//*=============================== Стили компонента страница "Авторизация" ===============================*//
+@import '../../styles/_variables.scss';
+@import '../../styles/mixins/_mixin-media.scss';
+
+.authorization {
+	display: flex;
+	justify-content: center;
+	@include media-max(768) {
+		height: auto;
+	}
+	&__overtitle {
+		margin-bottom: 1.5rem;
+		@include media-max(768) {
+			font-size: $fs_4;
+		}
+	}
+	&__entry,
+	&__registration {
+		@extend %flex-cent;
+		position: absolute;
+		top: 0;
+		width: 41rem;
+		height: 100%;
+		padding: 1.563rem;
+		background-color: $col_7;
+		transition: $tr_autoriz;
+		@include media-max(768) {
+			top: 50%;
+			left: 50%;
+			width: 58.55rem;
+			height: 60%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+.authorization-header {
+	background-color: $col_1;
+}
+.authorization-wrap {
+	@extend %flex-colum-cent;
+	padding-top: 2.5rem;
+	@include media-max(768) {
+		padding-top: 6rem;
+	}
+}
+.authorization-form-box {
+	position: relative;
+	width: 73.55rem;
+	min-width: 73.55rem;
+	height: 34rem;
+	min-height: 34rem;
+	padding: 1.563rem;
+	background-color: $col_7;
+	box-shadow: $bs_form-author;
+	border-radius: 0.75rem;
+	overflow: hidden;
+	@include media-max(1024) {
+		transform: scale(1.03);
+	}
+	@include media-max(768) {
+		width: 58.55rem;
+		min-width: 58.55rem;
+		height: 70rem;
+		min-height: 70rem;
+		margin-bottom: 2rem;
+		transform: scale(1);
+	}
+	@include media-max(576) {
+		width: 40.55rem;
+		min-width: 40.55rem;
+	}
+	@include media-max(320) {
+		width: 26rem;
+		min-width: 26rem;
+	}
+}
+.registration-authorization,
+.entry-authorization {
+	left: calc(100% - 44rem);
+	@include media-max(768) {
+		left: calc(100% - 50%);
+		top: calc(100% - 20.9rem);
+	}
+}
+.registration-authorization {
+	z-index: 100;
+}
+.form-registration-authorization,
+.form-entry-authorization {
+	@extend %flex-colum-cent;
+	width: 100%;
+	height: 100%;
+	@include media-max(768) {
+		transform: scale(1.1);
+	}
+	& input {
+		width: 21.88rem;
+		height: 2.5rem;
+		margin: 0.25rem 0;
+		background-color: $col_7;
+		padding: 0rem 2.5rem 0rem 1.563rem;
+		border: none;
+		outline: none;
+		background-color: $col_7;
+		transition: 0.25s ease;
+		border-radius: 8px;
+		box-shadow: $bs_input;
+		transition: box-shadow 0.5s ease-in-out;
+		&:focus {
+			box-shadow: $bs_input-f;
+		}
+		&.error {
+			box-shadow: $bs_input-error;
+		}
+	}
+	&__link {
+		margin: 1rem 0rem 2rem 0rem;
+		border-bottom: 0.0625rem solid $col_8;
+		line-height: $lh_18;
+		opacity: 0.6;
+	}
+	& .contact-us-social {
+		margin-bottom: 1.7rem;
+	}
+	& .contact-us-social__link {
+		width: 2.75rem;
+		height: 2.75rem;
+		& svg {
+			width: 1.7rem;
+			height: 1.7rem;
+		}
+	}
+	&__title {
+		margin-bottom: 1.7rem;
+	}
+	&__text {
+		opacity: 0.6;
+		margin-bottom: 1rem;
+	}
+	&__input-password-box {
+		position: relative;
+	}
+}
+.form-registration-authorization {
+	&__input-password .btn-show-password {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&__btn {
+		margin-top: 2rem;
+	}
+}
+.entry-authorization {
+	z-index: 0;
+}
+.form-entry-authorization {
+	&__title {
+		margin-bottom: 2rem;
+	}
+}
+.switch-authorization {
+	@extend %flex-cent;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 29.45rem;
+	height: 100%;
+	background-color: $col_7;
+	box-shadow: $bs_switch;
+	padding: 3.125rem;
+	z-index: 200;
+	transition: $tr_autoriz;
+	overflow: hidden;
+	@include media-max(768) {
+		top: 20%;
+		left: 50%;
+		width: 58.55rem;
+		min-width: 58.55rem;
+		height: 40%;
+		transform: translate(-50%, -50%);
+	}
+	@include media-max(576) {
+		width: 40.55rem;
+		min-width: 40.55rem;
+	}
+	@include media-max(320) {
+		width: 26rem;
+		min-width: 26rem;
+	}
+	&__circle {
+		position: absolute;
+		bottom: -60%;
+		left: -60%;
+		width: 31rem;
+		height: 31rem;
+		background-color: $col_7;
+		border-radius: 50%;
+		box-shadow: $bs_circle;
+		transition: $tr_autoriz;
+		@include media-max(768) {
+			left: -10rem;
+			bottom: -18rem;
+		}
+		@include media-max(768) {
+			width: 25rem;
+			height: 25rem;
+		}
+		&.is-txr {
+			bottom: -75%;
+			@include media-max(768) {
+				right: 0%;
+				width: 21rem;
+				height: 21rem;
+			}
+			@include media-max(768) {
+				width: 15rem;
+				height: 15rem;
+			}
+		}
+	}
+	&__circle--t {
+		top: -30%;
+		left: 60%;
+		width: 18.75rem;
+		height: 18.75rem;
+		@include media-max(768) {
+			width: 15rem;
+			height: 15rem;
+		}
+		&.is-txr {
+			top: -35%;
+			@include media-max(768) {
+				left: -0%;
+			}
+		}
+	}
+	&__container {
+		@extend %flex-colum-cent;
+		position: absolute;
+		width: 29.45rem;
+		padding: 3.125rem 3.438rem;
+		transition: $tr_autoriz;
+		@include media-max(768) {
+			width: 58.55rem;
+			height: 100%;
+			overflow: hidden;
+		}
+		@include media-max(576) {
+			width: 40.55rem;
+		}
+		@include media-max(320) {
+			width: 26rem;
+			padding: 0.5rem;
+		}
+	}
+	&__title {
+		margin-bottom: 2rem;
+		@include media-max(768) {
+			font-size: $fs_14;
+		}
+	}
+	&__text {
+		letter-spacing: $ls_0;
+		text-align: center;
+		opacity: 0.6;
+		margin-bottom: 3rem;
+		@include media-max(768) {
+			font-size: $fs_2;
+		}
+		@include media-max(576) {
+			font-size: $fs_base;
+		}
+	}
+}
+.is-txr {
+	left: calc(100% - 29.45rem);
+	transition: $tr_autoriz;
+	transform-origin: left;
+	@include media-max(768) {
+		left: 50%;
+		top: calc(100% - 14rem);
+		transform-origin: top;
+	}
+}
+.is-txl {
+	left: 0;
+	transition: $tr_autoriz;
+	transform-origin: right;
+	@include media-max(768) {
+		left: 50%;
+		top: 31%;
+		transition: $tr_autoriz;
+		transform-origin: top;
+	}
+}
+.is-z200 {
+	z-index: 200;
+	transition: $tr_autoriz;
+}
+.is-hidden {
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	transition: $tr_autoriz;
+}
+.is-gx {
+	animation: is-gx $tr_autoriz;
+}

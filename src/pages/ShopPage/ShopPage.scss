@@ -1,0 +1,132 @@
+//* ==================================== Стили страницы "Магазин" ========================================*\\
+@import "../../styles/_variables.scss";
+@import "../../styles/mixins/_mixin-media.scss";
+
+.shop {
+	@include media-max(768) {
+		overflow-y: auto;
+	}
+	@include media-max(576) {
+		background-size: contain;
+	}
+		&__title {
+			margin-bottom: 1.625rem;
+		}
+		&__product-cards {
+			min-height: 28.2rem;
+			@include media-max(576) {
+				min-height: 23.2rem;
+			}
+		}
+		&__message-error-loading {
+			margin: 14rem 0rem;
+		}
+}
+
+.webp .shop {
+	background: url(/assets/img/shop/shop_bg.webp) center/cover no-repeat;
+}
+
+.no-webp .shop,
+.no-js .shop {
+	background: url(/assets/img/shop/shop_bg.jpg) center/cover no-repeat;
+}
+
+.shop-header {
+	background: $col_21;
+}
+
+.shop-wrap {
+	position: relative;
+	@extend %flex-colum-cent;
+	width: 100%;
+	height: 100%;
+	padding-top: 3.5rem;
+	@include media-max(768) {
+		padding-top: 5.5rem;
+		height: auto;
+	}
+}
+
+.form-search {
+	width: 17rem;
+	height: 3.5rem;
+	display: flex;
+	align-items: center;
+	padding: 0.8rem;
+	border: 0.0625rem solid $col_6;
+	background: $col_21;
+	border-radius: 2rem;
+	box-shadow: $bs_base;
+	position: absolute;
+	top: 6.5rem;
+	left: 0rem;
+	transition: all 0.3s ease-in-out;
+	@include media-max(576) {
+		position: relative;
+		top: -0.9rem;
+		left: 0rem;
+		margin-bottom: 1rem;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		border: 0.0625rem solid $col_3;
+		& .form-search__icon-search {
+			fill: $col_3;
+		}
+		& .form-search__input::placeholder {
+			opacity: 0;
+			transform: translateX(-15rem);
+			transition: transform 0.5s ease-in-out, opacity 0.7s;
+		}
+	}
+	&__input {
+		background: $col_21;
+		&::placeholder {
+			opacity: 0.7;
+			transition: opacity 1s ease-in-out;
+		}
+	}
+	&__icon-search {
+		width: 1.7rem;
+		height: 1.7rem;
+		margin-right: 0.4rem;
+		transition: fill 0.3s ease-in-out;
+	}
+	&__icon-clear {
+		fill: $col_base;
+		width: 1.5rem;
+		height: 1.5rem;
+		opacity: 0.4;
+		cursor: pointer;
+		margin-left: 0.3rem;
+		transition: opacity 0.3s ease-in-out, fill 0.3s ease-in;
+		&:hover {
+			fill: $col_3;
+			opacity: 1;
+			transition: opacity 0.3s ease-in-out, fill 0.3s ease-in;
+		}
+	}
+}
+.autocomplete-form-search {
+	position: absolute;
+	top: 4.5rem;
+	left: 0;
+	width: 100%;
+	max-height: 15rem;
+	height: auto;
+	background: $col_1;
+	box-shadow: $bs_base;
+	border-radius: 0.5rem;
+	overflow: auto;
+	z-index: 3;
+	&__item {
+		padding: 1rem;
+		&:hover {
+			background: $col_10;
+			transition: all 0.3s ease-in-out;
+			cursor: pointer;
+		}
+	}
+}

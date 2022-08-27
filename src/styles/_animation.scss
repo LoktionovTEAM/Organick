@@ -1,0 +1,87 @@
+//* =============================== CSS Animations  ================================== *//
+
+//? Анимация переходов между страницами
+.page-enter {
+	opacity: 0;
+	transform: scale(1.1);
+}
+
+.page-enter-active {
+	opacity: 1;
+	transform: scale(1);
+	transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.page-exit-active {
+	opacity: 0;
+	transform: scale(0.9);
+	transition: opacity 300ms, transform 300ms;
+}
+
+//? Анимация появления/скрытия карточек товара
+.products-cards-anim-enter {
+	opacity: 0;
+}
+.products-cards-anim-enter-active {
+	opacity: 1;
+	transition: opacity 500ms ease-in;
+}
+.products-cards-anim-exit {
+	opacity: 1;
+}
+.products-cards-anim-active {
+	opacity: 0;
+	transition: opacity 500ms ease-in;
+}
+
+//? Анимация добавления/удаления товара в/из корзину/ы
+.cart-products-item-anim-exit-active {
+	animation: fade-out 700ms forwards;
+}
+.cart-products-item-anim-enter-active {
+	animation: fade-in 700ms forwards;
+}
+
+
+//? Анимация удаления товара из корзины
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		transform: translateX(10rem);
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes fade-out {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-10rem);
+		opacity: 0;
+	}
+}
+
+//? Анимация переключателя вход/регистрация
+@keyframes is-gx {
+	0%,
+	10%,
+	100% {
+		width: 29.45rem;
+	}
+	30%,
+	50% {
+		width: 35.8rem;
+	}
+}

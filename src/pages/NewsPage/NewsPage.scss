@@ -1,0 +1,40 @@
+//* ============================================ Стили компонента страница "Новости" ========================================*\\
+@import "../../styles/_variables.scss";
+@import "../../styles/mixins/_mixin-media.scss";
+
+.news {
+	overflow: hidden;
+	@include media-max(768) {
+		overflow: auto;
+	}
+	&__overtitle {
+		flex: 0 1 100%;
+	}
+	&__title {
+		flex: 0 1 80%;
+		@include media-max(768) {
+			margin-bottom: 1rem;
+		}
+		@include media-max(320) {
+			flex: 0 1 100%;
+		}
+	}
+}
+.news-header {
+	background-color: $col_1;
+}
+.news-wrap {
+	width: 100rem;
+	height: 100vh;
+  padding-top: 6rem;
+}
+.news-title-box {
+	display:flex;
+	justify-content: space-between;
+	flex-wrap:wrap;
+	margin-bottom: 1rem;
+	& > p {
+		font-size: $fs_3;
+    line-height: $lh_3;
+	}
+}
