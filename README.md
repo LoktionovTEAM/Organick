@@ -93,8 +93,11 @@ Modal window
 
 <!-- Дополнительная информация -->
 ## 🧷 **Доподнительная информация**
+<p style="max-weight:10rem;background-color:#161B22; border-radius: 0.5rem; padding: 1rem;">
+| Вы можете использовать это програмное обеспечение в рамках лицензии <span style="color: blue">MIT</span>, по своему усмотрению, однако, согласно требованиям настоящей лицензии, указанное ниже уведомление об авторском праве и данные условия должны быть в обязательном порядке включены во все его копии или значимые части.
+</p>
 
-```
+```js
 | Вы можете использовать это програмное обеспечение в рамках лицензии MIT, по своему усмотрению, однако, согласно требованиям настоящей лицензии, указанное ниже уведомление об авторском праве и данные условия должны быть в обязательном порядке включены во все его копии или значимые части.
 ```
 
@@ -108,7 +111,7 @@ Modal window
 
 <!-- Ссылки на социальные сети -->
 ## 📮 **Связаться с автором проекта**
-[<img align="left" alt="webtricks-master.ru" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
+[<img align="left" alt="LoktionovTEAM" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
 [<img align="left" alt="LoktionovTEAM | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
 [<img align="left" alt="LoktionovTEAM | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
 [<img align="left" alt="LoktionovTEAM | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
