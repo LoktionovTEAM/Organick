@@ -1,6 +1,6 @@
-<img style="margin-bottom: 1rem" src="./DEMOscreens/organik_img1.png" alt="React App Organick" align="center" />
+<img style="margin-bottom: 1rem" src="./screens/organik_img1.png" alt="React App Organick" align="center" />
 
-<h1 align="center" style="font-weight:bold;"><img src="./DEMOscreens/logo.png" alt="React App Organick" align="center" />
+<h1 align="center" style="font-weight:bold;"><img src="./screens/logo.png" alt="React App Organick" align="center" />
 </h1>
 
 <p align="center">
@@ -107,7 +107,7 @@ Modal window
 </br>
 
 <!-- Ссылки на социальные сети -->
-## 📮 **Связаться с автором**
+## 📮 **Связаться с автором проекта**
 [<img align="left" alt="webtricks-master.ru" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
 [<img align="left" alt="LoktionovTEAM | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
 [<img align="left" alt="LoktionovTEAM | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
