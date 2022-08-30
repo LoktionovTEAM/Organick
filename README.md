@@ -80,6 +80,9 @@ Authorization page
 Cart page
   ![Cart page](./screens/organik_img7.png)
 
+NotFound page
+![NotFound page](./screens/organik_img9.png)
+
 Modal window
   ![Modal window](./screens/organik_img8.png)
 

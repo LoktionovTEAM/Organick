@@ -23,6 +23,9 @@ import Card from '../../сomponents/Card'
 import Button from '../../сomponents/Button'
 import Pagination from '../../сomponents/Pagination'
 
+//? ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ:
+import { searhProductMask } from '../../pages/AuthorizationPage/maskForms' //? маска формы поиска по продукции
+
 //? РЕДЮСЕРЫ:
 import {
 	fetchProducts,
@@ -77,11 +80,6 @@ export default function ShopPage() {
 		setIsOpenSearchAutocomplete(false)
 	}
 
-	const SearhProductMask = function (value) {
-		let pattern = new RegExp(/^[a-zA-Z]+$/i)
-		return pattern.test(value)
-	}
-
 	return (
 		<Page tag='div' className='shop'>
 			<Header className='shop-header' />
@@ -104,7 +102,7 @@ export default function ShopPage() {
 							name='search'
 							type='text'
 							value={productsSearchValue}
-							mask={SearhProductMask}
+							mask={searhProductMask}
 							maxLength={100}
 							placeholder='Search in the product...'
 							onChange={onChangeHandlerInputSearch}

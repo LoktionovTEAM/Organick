@@ -1,8 +1,5 @@
 //* ==================================== Компонент страница "Новости" ========================================*\\
 
-//? МОДУЛИ:
-import { nanoid } from 'nanoid'
-
 //? КОМПОНЕНТЫ:
 import Page from '../../сomponents/Page'
 import Wrap from '../../сomponents/Wrap'
@@ -33,7 +30,7 @@ export default function NewsPage() {
 
 	return (
 		<Page tag='div' className='news'>
-			<Header className='news-header'/>
+			<Header className='news-header' />
 			<Wrap tag='div' className='news-wrap'>
 				<Box tag='div' className='news-title-box'>
 					<Text tag='p' className='overtitle news__overtitle'>
@@ -54,7 +51,7 @@ export default function NewsPage() {
 					className='news-slider'
 					slides={[
 						[
-							<Box key={nanoid()} tag='div' className='news-slider-slide__facts facts-slide'>
+							<Box key='slide1' tag='div' className='news-slider-slide__facts facts-slide'>
 								<Box tag='div' className='facts-slide-colum-left'>
 									<ImgWebP
 										className='facts-slide-colum-left__banner'
@@ -116,7 +113,7 @@ export default function NewsPage() {
 							</Box>,
 						],
 						[
-							<Box key={nanoid()} tag='div' className='news-slider-slide__nursery nursery-slide '>
+							<Box key='slide2' tag='div' className='news-slider-slide__nursery nursery-slide '>
 								<Box tag='div' className='nursery-slide-colum-left' />
 								<Box tag='div' className='news-colum-right nursery-slide-colum-right'>
 									<Box tag='div' className='nursery-slide-colum-right-box'>
@@ -147,7 +144,7 @@ export default function NewsPage() {
 							</Box>,
 						],
 						[
-							<Box key={nanoid()} tag='div' className='news-slider-slide__offers offers-slide'>
+							<Box key='slide3' tag='div' className='news-slider-slide__offers offers-slide'>
 								<Box tag='div' className='offers-slide-colum-left'>
 									<Box tag='div' className='offers-slide-box'>
 										<Text tag='p' className='overtitle offers-slide__overtitle'>
@@ -172,7 +169,7 @@ export default function NewsPage() {
 						],
 						[
 							<Box
-								key={nanoid()}
+								key='slide4'
 								tag='div'
 								className='news-slider-slide__testimonial testimonial-slide'>
 								<Box tag='div' className='testimonial-slide-box'>
@@ -206,13 +203,13 @@ export default function NewsPage() {
 										</Text>
 									</Text>
 								</Box>
-							</Box>
-						]
+							</Box>,
+						],
 					]}
 				/>
 			</Wrap>
 		</Page>
 	)
-	
+
 }
 

@@ -12,7 +12,7 @@ import Button from '../../сomponents/Button'
 //? СТИЛИ:
 import './pagination.scss'
 
-export default function Pagination({ tag: Tag, className, productsPerPage, totalProducts, paginate, currentPage, setCurrentPage, lastProductIndex, children, ...attrs }) {
+export default function Pagination({ tag: Tag, className, productsPerPage, totalProducts, paginate, currentPage, setCurrentPage, ...attrs }) {
 
 	const classes = classNames(
 		'pagination',
@@ -32,7 +32,7 @@ export default function Pagination({ tag: Tag, className, productsPerPage, total
 	}
 
 	const prevPage = () => {
-		
+
 		if (currentPage > 1) {
 			setCurrentPage((prev) => prev - 1)
 		}
@@ -75,11 +75,9 @@ export default function Pagination({ tag: Tag, className, productsPerPage, total
 Pagination.propTypes = {
 	tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 	className: PropTypes.string,
-	children: PropTypes.node,
 }
 
 Pagination.dafaultProps = {
 	tag: 'div',
 	className: '',
-	children: null,
 }

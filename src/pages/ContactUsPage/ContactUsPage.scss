@@ -133,7 +133,7 @@
 	&__input {
 		width: 21.88rem;
 		padding: 1rem;
-		border: 0.2rem solid rgba(255, 255, 255, 0);
+		border: 0.2rem solid $col_16;
 		border-radius: 1rem;
 		&::placeholder {
 			opacity: 0.7;
@@ -148,7 +148,7 @@
 			transition: transform 0.5s ease-in-out, opacity 0.7s;
 		}
 		&:focus {
-			border: 0.2rem solid rgba(255, 255, 255, 0.8);
+			border: 0.2rem solid $col_24;
 		}
 		&.error {
 			box-shadow: $bs_input-error;

@@ -14,3 +14,8 @@ export const passwordMask = function (value) {
 	let pattern = new RegExp(/^[-a-z0-9!#$%&@'*+/=?^_`{|}~.]+$/i)
 	return pattern.test(value)
 }
+
+export const searhProductMask = function (value) {
+	let pattern = new RegExp(/^[a-zA-Z]+$/i)
+	return pattern.test(value)
+}
