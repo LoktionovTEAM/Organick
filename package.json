@@ -30,7 +30,7 @@
 		"yup": "^0.32.11"
 	},
 	"scripts": {
-		"start": "concurrently \"react-scripts start\" \"json-server -w public/organick.json --port 3001\"",
+		"start": "concurrently \"react-scripts start\" \"json-server -w public/bd.json --port 3001\"",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
