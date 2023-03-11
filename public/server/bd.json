@@ -157,7 +157,19 @@
       "amount": 54.8
     }
   ],
-  "users": [],
+  "users": [
+    {
+      "name": "Victor",
+      "email": "SvarovskY@mail.ru",
+      "password": "6574382",
+      "id": 1
+    }
+  ],
   "orders": [],
-  "subscribers": []
+  "subscribers": [
+    {
+      "email": "SvarovskY@mail.ru",
+      "id": 1
+    }
+  ]
 }
