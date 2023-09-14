@@ -28,7 +28,7 @@
 | [**Babel**](https://babeljs.io/) | *цепочка инструментов, используемая для преобразования кода ECMAScript 2015+ в обратно совместимую версию JavaScript в текущих и более старых браузерах или средах.* |
 | [**Redux Toolkit**](https://redux-toolkit.js.org/) | *redux библиотека, предназначенная для стандартного способа написания логики.* |
 | [**Axios**](https://github.com/axios/axios) | *javaScript библиотека с открытым исходным кодом, построенная на HTTP-клиенте для браузера и Node.JS, основанном на Promise.* |
-| [**JSON-Server**](https://github.com/typicode/json-server) | *JavaScript библиотека для создания тестового REST API* |
+| [**JSON-Server**](https://github.com/typicode/json-server) | *javaScript библиотека для создания тестового REST API.* |
 
 
 </br>
